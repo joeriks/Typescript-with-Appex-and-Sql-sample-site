@@ -1,0 +1,22 @@
+{
+  "name": "somesite",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-open": "~0.2.2"
+  },
+  "dependencies": {
+    "grunt-cli": "~0.1.9",
+    "appex": "~0.6.0"
+  }
+}
