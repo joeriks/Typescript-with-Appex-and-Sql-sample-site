@@ -1,5 +1,6 @@
 /// <reference path="node_modules/appex/appex.d.ts" />
 /// <reference path="someresource.ts"/>
+/// <reference path="products.ts"/>
 
 // url path: /
 export function index(context:appex.web.IContext) {

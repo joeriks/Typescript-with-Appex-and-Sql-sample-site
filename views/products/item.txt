@@ -1,0 +1,4 @@
+<p>Id: @(context.model.id)</p>
+<p>Value: @(context.model.value)</p>
+
+<a href="/products">List products</a>

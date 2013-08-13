@@ -37,3 +37,4 @@ To create a typical resource, just name a module with the resource name, and use
 
     }
 
+Check out the name.ts file for an example using views and models (and sql)

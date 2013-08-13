@@ -1,0 +1,9 @@
+<h1>List</h1>
+
+<ul>
+@for(var n in context.model) {
+
+    <li> <a href="/products/@(context.model[n].id)">@(context.model[n].value) ( @(context.model[n].id) )</a></li>
+
+}
+</ul>

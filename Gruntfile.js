@@ -3,7 +3,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         appex: {
             port: 3000,
-            program: './program.ts'
+            program: './program.ts',
+            connstr: "Driver={SQL Server Native Client 11.0};Server={(local)\\SQLEXPRESS};Database={sampledb};Trusted_Connection={Yes};"
         },
         serverport: 3000,
         watch: {},
