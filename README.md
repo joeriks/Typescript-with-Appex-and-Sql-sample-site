@@ -20,41 +20,29 @@ Serv json by using the json function instead:
         context.response.json({id:0,foo:'bar'});
     }
 
-To create a typical resource, just name a module with the resource name, and use functions within it:
+To create a typical resource with some url endpoint, you just name a module with the resource name, and use functions within it.
 
-    export module someresource {
+Appex supports views too, just use express ones or the built in razor like view engine:
 
-        // url: /someresource
-        export function index(context:appex.web.IContext){
-            context.response.send('Hello from someresource');
-        }
 
-        // url /someresource/:id - only accepting numbers
+    export module products{
+        ...
+
+        // handling /products/:id url
         export function wildcard(context:appex.web.IContext, id:number){
-            var someObject = {id:id, somedata:'xyz'};
-            context.response.json(someObject);
-        }
 
-    }
-
-
-For a basic sample listing and viewing data from a sql database with an mvc structure check out program.ts and its views.
-
-products.ts:
-
-    export function wildcard(context:appex.web.IContext, id:number){
-
-        sql.open(conn_str, function( err, conn ) {
-            conn.query( "SELECT * FROM dbo.name WHERE id=" + id, function( err, results ) {
-                var text = context.template.render('./views/products/item.txt', { model: results[0] });
-                context.response.headers['Content-Type'] = 'text/html';
-                context.response.send(text);
+            sql.open(conn_str, function( err, conn ) {
+                conn.query( "SELECT * FROM dbo.name WHERE id=" + id, function( err, results ) {
+                    var text = context.template.render('./views/products/item.txt', { model: results[0] });
+                    context.response.headers['Content-Type'] = 'text/html';
+                    context.response.send(text);
+                });
             });
-        });
 
+        }
     }
 
-item.txt (notice the razor like syntax its a built in template engine in Appex):
+/views/products/item.txt:
 
     <p>Id: @(context.model.id)</p>
     <p>Value: @(context.model.value)</p>
