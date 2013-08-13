@@ -51,3 +51,5 @@ Appex supports views too, just use express ones or the built in razor like view 
 
 
 There's **much** more to Appex. Be sure to check out the project itself https://github.com/sinclairzx81/appex
+
+If you need the sql module it's at npm install msnodesql. Unfortunately they do not have updated binaries (node v1 & x64) yet, if you like those you need to compile yourself, or grab it from here https://github.com/joeriks/nodesql_sample
