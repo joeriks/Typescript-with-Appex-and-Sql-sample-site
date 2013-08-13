@@ -3,7 +3,7 @@ somesite
 
 ##Playing with Appex
 
-**Appex https://github.com/sinclairzx81/appex is a really easy to use web framework, making use of Typescript in smart ways. It's for example compiling the typescript in memory, not using javascript files.**
+**Appex https://github.com/sinclairzx81/appex is a really easy to use web framework, making use of Typescript in smart ways. It's for example compiling the typescript in memory, not using javascript files. As the compiles are in the memory changes are instant (in dev mode), just edit save and check out the results.**
 
 Simply add modules with functions for each url endpoint. Appex will figure out url paths by the module and function names.
 
@@ -37,4 +37,7 @@ To create a typical resource, just name a module with the resource name, and use
 
     }
 
-Check out the products.ts file for a conventional example using views and models + getting data from sql
+
+For a basic sample listing and viewing data from a sql database with an mvc structure check out program.ts and its views.
+
+There's **much** more to Appex. Be sure to check out the project itself https://github.com/sinclairzx81/appex
