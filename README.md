@@ -1,11 +1,11 @@
 somesite
 ========
 
-#Playing with Appex https://github.com/sinclairzx81/appex
+##Playing with Appex
 
-Appex is a really easy to use web framework, making use of Typescript in smart ways. It's for example compiling the typescript in memory, not using javascript files.
+**Appex https://github.com/sinclairzx81/appex is a really easy to use web framework, making use of Typescript in smart ways. It's for example compiling the typescript in memory, not using javascript files.**
 
-Simply add modules with functions for each url endpoint.
+Simply add modules with functions for each url endpoint. Appex will figure out url paths by the module and function names.
 
 For example, a function named 'about' in the main module (usually saved in program.ts) will return data on the /about url:
 
