@@ -40,4 +40,26 @@ To create a typical resource, just name a module with the resource name, and use
 
 For a basic sample listing and viewing data from a sql database with an mvc structure check out program.ts and its views.
 
+products.ts:
+
+    export function wildcard(context:appex.web.IContext, id:number){
+
+        sql.open(conn_str, function( err, conn ) {
+            conn.query( "SELECT * FROM dbo.name WHERE id=" + id, function( err, results ) {
+                var text = context.template.render('./views/products/item.txt', { model: results[0] });
+                context.response.headers['Content-Type'] = 'text/html';
+                context.response.send(text);
+            });
+        });
+
+    }
+
+item.txt (notice the razor like syntax its a built in template engine in Appex):
+
+    <p>Id: @(context.model.id)</p>
+    <p>Value: @(context.model.value)</p>
+
+    <a href="/products">List products</a>
+
+
 There's **much** more to Appex. Be sure to check out the project itself https://github.com/sinclairzx81/appex
