@@ -16,3 +16,7 @@ export function about(context:appex.web.IContext) {
 export function wildcard (context:appex.web.IContext, path) {
     context.response.send(404, path + " not found");
 }
+
+export function github(context:appex.web.IContext) {
+    context.response.send('wow, I just realized GitHub has excellent Typescript syntax highlighting');
+}
